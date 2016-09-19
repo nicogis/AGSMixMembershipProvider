@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9628854-F58D-477F-9E51-E5C57E0E38EE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>AGSMixMembershipProvider</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>AGSMixMembershipProvider.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>AGSMixMembershipProvider</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="AGSRoleProviderWrapper.cs" />
+    <Compile Include="AGSSqlMembershipProvider.cs" />
+    <Compile Include="AGSSqlRoleProvider.cs" />
+    <Compile Include="Util.cs" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="ESRI.ArcGIS.Server">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System">
+      <Private>False</Private>
+    </Reference>
+    <Compile Include="ADUtil.cs" />
+    <Compile Include="AGSMembershipProviderWrapper.cs" />
+    <Compile Include="AGSMixMembershipProvider.cs" />
+    <Compile Include="AGSRole.cs" />
+    <Compile Include="AGSUser.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="RoleProviderEx.cs" />
+    <Compile Include="AGSMixRoleProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AGSMixMembershipProvider.snk" />
+  </ItemGroup>
+</Project>
