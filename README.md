@@ -58,7 +58,7 @@ Copy and paste the following text into the Role Store Configuration dialog box o
 
 -   Click Update to save your configuration.
 
--   Install two web adaptor in IIS. In the first enable only WA and in the second only Basic Authentication
+-   Install two web adaptor in IIS and set Web-tier authentication. In the first enable only WA and in the second only Basic Authentication
 
 -   For basic authentication you need create windows local users and add users in db sql server (username: 'namemachine\nameuser')
 
