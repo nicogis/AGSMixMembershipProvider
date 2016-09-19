@@ -72,5 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="AGSMixMembershipProvider.snk" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Support\AGSMixMembershipProvider.sql" />
   </ItemGroup>
 </Project>
